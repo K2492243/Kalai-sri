@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Admin Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+
+  <!-- Core Feature 1: Overview Stats -->
+  <h3>Overview</h3>
+  <p>Total Users: 200</p>
+  <p>Total Sales: $5,000</p>
+  <p>Active Sessions: 50</p>
+
+  <!-- Core Feature 2: Data Visualization -->
+  <h3>Sales Chart</h3>
+  <canvas id="salesChart"></canvas>
+
+  <script>
+    // Core Feature Implementation: Chart
+    new Chart(document.getElementById("salesChart"), {
+      type: "bar",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+        datasets: [{
+          label: "Sales ($)",
+          data: [1000, 1200, 800, 1500, 500],
+          backgroundColor: "green"
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
